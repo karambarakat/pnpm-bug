@@ -1,9 +1,0 @@
-node_modules
-out
-
-manual.md
-dev_resources/
-.turbo/
-
-
-do_app_spec_prod.yaml

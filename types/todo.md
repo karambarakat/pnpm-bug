@@ -1,1 +1,0 @@
-- [ ] docorize the build:strapi command in package.json

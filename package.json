@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "Mono repo for my portfolio",
   "private": true,
-  "workspaces": [
-    "apps/**",
-    "pkgs/**",
-    "exps/**"
-  ],
   "scripts": {
     "db": "docker compose up db -d",
     "dev": "pnpm --parallel run dev"
