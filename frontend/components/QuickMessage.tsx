@@ -1,9 +1,12 @@
-import { MapActionIds as MapActionIds, useActions } from '../utils/actionMap'
+import {
+  MapActionIds as MapActionIds,
+  useActions
+} from '../../pkgs/ui/utils/actionMap'
 
 export default function QuickMessage({
   code = 'Ops!',
   message = 'Something went wrong?',
-  actions,
+  actions
 }: {
   code?: string
   message?: string

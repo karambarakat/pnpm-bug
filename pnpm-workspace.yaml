@@ -1,7 +1,8 @@
 packages:
-  - 'apps/**'
-  - 'pkgs/**'
-  - 'exps/**'
+  - 'e2e'
+  - 'frontend'
+  - 'strapi'
+  - 'types'
   # exclude packages that are inside test directories
   - '!**/test/**'
   

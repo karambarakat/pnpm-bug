@@ -1,5 +1,4 @@
 'use client'
-
 import QuickMessage from '@ws/ui/components/QuickMessage'
 import { useAddAction } from '@ws/ui/utils/actionMap'
 import { v4 as uuid } from 'uuid'

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Illuminate from '../Background/Illuminate'
+import Illuminate from './Illuminate'
 import Background_ from './index'
 import bg from './assets/shades.png'
 
@@ -8,8 +8,8 @@ const meta: Meta<typeof Illuminate> = {
   component: Illuminate,
   tags: ['autodocs'],
   args: {
-    bg: bg.src,
-  },
+    bg: bg.src
+  }
 }
 
 export default meta
@@ -19,9 +19,9 @@ export const Hover: Story = {}
 
 export const Background: Story = {
   parameters: {
-    layout: 'fullscreen',
+    layout: 'fullscreen'
   },
-  render: (args) => {
+  render: args => {
     return (
       <Background_ {...args}>
         <div className="child:text-3xl grid gap-10 pt-10">
@@ -52,5 +52,5 @@ export const Background: Story = {
         </div>
       </Background_>
     )
-  },
+  }
 }

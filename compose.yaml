@@ -1,0 +1,54 @@
+version: "3.8"
+services:
+  fetch_graphql:
+    image: node
+    depends_on:
+      - strapi
+    entrypoint: ["echo ", "hi"]
+    volumes:
+      - ./output:/output
+
+  strapi_ephemeral:
+    build:
+      context: ../
+      dockerfile: ./strapi/Dockerfile
+    networks:
+      - default
+    environment:
+      - DATABASE_FILENAME=.tmp/dev.db
+      - DATABASE_CLIENT=sqlite
+    ports:
+      - "8080:1337"
+    depends_on:
+      - db
+
+  strapi:
+    build:
+      context: ../
+      dockerfile: ./strapi/Dockerfile
+    networks:
+      - default
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
+      - DATABASE_CLIENT=postgres
+    ports:
+      - "8080:1337"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge

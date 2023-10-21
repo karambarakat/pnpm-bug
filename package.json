@@ -9,11 +9,8 @@
     "exps/**"
   ],
   "scripts": {
-    "start": "turbo run start",
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "test": "turbo run test",
-    "lock": "npm install --package-lock-only --workspaces"
+    "db": "docker compose up db -d",
+    "dev": "pnpm --parallel run dev"
   },
   "devDependencies": {
     "turbo": "latest"

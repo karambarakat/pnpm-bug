@@ -1,4 +1,5 @@
 import './tailwind.css'
+import './global.css'
 import React, { ReactNode, Suspense } from 'react'
 import Separator from '@ws/ui/components/Separator'
 import Typo from '@ws/ui/components/Typo'
